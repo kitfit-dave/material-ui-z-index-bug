@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FormControl, TextField, Paper, MenuItem, Input, InputLabel } from '@material-ui/core'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="oneColumn">
+        <FormControl>
+          <InputLabel>First Field</InputLabel>
+          <Input />
+          <div className="outerContainer">
+              <Paper className="innerContainer">
+                <MenuItem>Item One</MenuItem>
+                <MenuItem>Item Two</MenuItem>
+                <MenuItem>Item Three</MenuItem>
+              </Paper>
+          </div>
+        </FormControl>
+        <TextField label='Second Field' />
       </div>
     );
   }
